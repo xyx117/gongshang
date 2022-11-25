@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "定安县企业经营处罚名单";
+}
+@using (Html.BeginForm("excelImport", "chufachaxun", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="listbox2"></div>
+     <div class="listbox1">
+         <div class="tle left">企业经营处罚名单批量导入：</div>
+         <div class="right">
+             <a href="/chufachaxun/caozuoindex"><img src="/content/images/back.png" style="float:right; margin-top:1px; margin-bottom:2px; margin-right:100px; cursor: pointer;border-width:0px 0px 0px 0px;height:30px;"/></a>
+         </div>
+         <div class="clr"></div>
+     </div>
+    
+    
+    <div>
+        <fieldset id="myfieldset">
+            <legend>Excel模版格式 </legend>
+            <p style="text-align: center;"><img src="~/content/images/download.png" style="width:30px;height:30px;vertical-align:middle;"/>导入的模板格式如下，若模板格式不正确，则相应的名单不能导入:</p>
+           
+            <p style="color: Red; text-align: center;"> @Html.ActionLink("下载模版", "GetFile")</p>
+        </fieldset>
+    </div>
+    <div style="margin-top: 20px;">
+        <fieldset id="myfieldset1">
+            <legend>批量信息导入</legend>
+            <p style="margin-left:550px; font-size:18px;font-weight:bold;">
+                选择文件：<input id="FileUpload" type="file" name="files" style="width: 250px; height: 24px;
+                    background: White" class="easyui-validatebox" /></p>
+             <p style="margin-left:550px; font-size:18px;font-weight:bold;">
+                更新模式：<select id="gengxinmoshi" name="gengxinmoshi">
+                                <option value ="zhuijia">追加</option>
+                                 <option value ="fugai">覆盖</option>
+                         
+                          </select>
+                                                  </p>
+            <p style="text-align: center;">
+                <input id="btnImport" type="submit" value="导入" style="width: 60px; height: 28px; color:black;" /></p>
+            <p style="color: Red; text-align: center;">@ViewBag.error</p>
+        </fieldset>
+    </div>
+}

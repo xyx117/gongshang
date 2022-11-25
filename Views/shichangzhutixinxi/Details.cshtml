@@ -1,0 +1,57 @@
+﻿@model gongshangchaxun.Models.shichangzhutixinxi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>shichangzhutixinxi</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mingcheng)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mingcheng)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.zhuceID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zhuceID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fadingdaibiaoren)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fadingdaibiaoren)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.beianxinxi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.beianxinxi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.chengliriqi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.chengliriqi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dengjibumen)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dengjibumen)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.shichangzhutiID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

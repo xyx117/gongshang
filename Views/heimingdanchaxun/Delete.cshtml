@@ -1,0 +1,53 @@
+﻿@model gongshangchaxun.Models.heimingdan
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>heimingdan</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mingcheng)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mingcheng)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fadingdaibiaoren)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fadingdaibiaoren)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.jizaishiyou)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.jizaishiyou)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.jizairiqi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.jizairiqi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.jizaibumen)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.jizaibumen)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

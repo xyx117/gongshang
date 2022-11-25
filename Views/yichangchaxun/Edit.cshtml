@@ -1,0 +1,69 @@
+﻿@model gongshangchaxun.Models.yichangmingdan
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>yichangmingdan</legend>
+
+        @Html.HiddenFor(model => model.zhuceID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mingcheng)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mingcheng)
+            @Html.ValidationMessageFor(model => model.mingcheng)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fadingdaibiaoren)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fadingdaibiaoren)
+            @Html.ValidationMessageFor(model => model.fadingdaibiaoren)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.jizaishiyou)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.jizaishiyou)
+            @Html.ValidationMessageFor(model => model.jizaishiyou)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.jizairiqi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.jizairiqi)
+            @Html.ValidationMessageFor(model => model.jizairiqi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.jizaibumen)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.jizaibumen)
+            @Html.ValidationMessageFor(model => model.jizaibumen)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

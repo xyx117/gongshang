@@ -1,0 +1,18 @@
+﻿@model gongshangchaxun.Models.setupdb
+@{
+    ViewBag.Title = "setupcanshu";
+    Layout = "~/Views/Shared/_Layoutgl.cshtml";
+}
+<div style="border-bottom:solid 1px #b5cbe3; margin-top:30px;margin-bottom:20px;">
+         <div style=" float:left; padding-left:5px;font-size:18px; ">系统管理员——参数管理：</div>
+         <div style="float:right;">
+          <a href="/test/"><img src="/content/images/back.png" style="float:right; margin-top:1px; margin-bottom:2px; margin-right:50px; cursor: pointer;border-width:0px 0px 0px 0px;height:30px;"/></a>
+         </div>
+         <div class="clr"></div>
+     </div>
+<div style="text-align:center;font-size:20px;margin-top:30px;margin-bottom:30px;">您确认要删除参数 @Html.DisplayFor(model => model.canshu) 吗?</div>
+@using (Html.BeginForm()) {
+    <p style="text-align:center;">
+        <input type="submit" value="删除"  style="font-size:20px; color:black;"/>    
+    </p>
+}

@@ -1,0 +1,72 @@
+﻿@model gongshangchaxun.Models.LoginModel
+
+@{
+    ViewBag.Title = "登录";
+    
+    string shengfen="管理员";
+    string addr = ViewBag.ReturnURL.ToString();
+    
+    if(addr.Contains("admin"))
+    {
+        shengfen="系统管理员";
+       
+    }
+    
+    
+}
+
+<hgroup class="title">
+    <h3 >
+       @shengfen @ViewBag.Title:</h3>
+</hgroup>
+
+<section id="loginForm" style="padding-top:60px; padding-bottom:60px;">
+
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>“登录”表单</legend>
+       
+        <table style="margin:0 auto; font-size:20px; color:black;padding:20px">
+            <tr>
+                <td>  @Html.LabelFor(m => m.UserName)</td>
+                <td>@Html.TextBoxFor(m => m.UserName,new{style="width:200px;height:35px;font-size:22px; color:black;"})
+                @Html.ValidationMessageFor(m => m.UserName)</td>
+            </tr>
+            <tr></tr>
+             <tr>
+                <td>  @Html.LabelFor(m => m.Password)</td>
+                <td>   @Html.PasswordFor(m => m.Password,new{style="width:200px;height:35px; font-size:20px;"})
+                @Html.ValidationMessageFor(m => m.Password)</td>
+            </tr>
+            <tr></tr>
+            <tr>
+                 <td>   @Html.CheckBoxFor(m => m.RememberMe)</td>
+                <td>   @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })</td>
+
+            </tr>
+              <tr></tr>
+            <tr>
+                <td colspan="2" style="text-align:center; ">  <input type="submit" value="登录" style="font-size:20px; color:black;" /></td>
+            </tr>
+
+        </table>
+    @*   <HR style=" width:550px; color:grey;height:1px;">
+     <p style="text-align:center;">
+       ( 如果你没有帐户,请 @Html.ActionLink("注册", "Register") ！)
+       </p>*@
+    </fieldset>
+    
+}
+</section>
+
+@*<section class="social" id="socialLoginForm">
+    <h2>使用其他服务登录。</h2>
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,74 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body{font-family:SimSun,"Microsoft YaHei";margin:0; padding:0; border:0; font-size:14px; line-height:18px; color:#666;}
+a{text-decoration:none; color:#0e61ad}
+a:hover{color:#f60;}
+input{font-family:SimSun; color:#999;}
+input[type="text"]{border:1px solid #d9d9d9; height:20px; line-height:19px;}
+.clr{clear:both;}
+
+	/* index */
+/* .indextop{ width:1920px; height:630px;position:relative;}
+.indexlogo{ width:1920px;margin:auto; padding-top:430px;position:absolute;left:415px;z-index:100;} */
+.indextop{ width:1920px; background:url(../images/zj/pic01.jpg) no-repeat;}
+.indexlogo{ width:1089px;margin:auto; padding-top:430px;}
+.indexlistbox{ background:url(../images/zj/index_bg.jpg) repeat-x; width:1920px; height:450px;position:absolute;z-index:-100;}
+.indexbottom{ text-align:center; font-size:18px; font-family:"Microsoft YaHei"; line-height:95px\0;  color:#FFF; }
+.btn_search1{background:url(../images/zj/btn_1.jpg) no-repeat; width:330px; height:180px; cursor:pointer; border:none;}
+.btn_search1:hover{background:url(../images/zj/btn_1.jpg) left bottom no-repeat;}
+.btn_search2{background:url(../images/zj/btn_2.jpg) no-repeat; width:330px; height:180px; cursor:pointer; border:none;}
+.btn_search2:hover{background:url(../images/zj/btn_2.jpg) left bottom no-repeat;}
+.btn_search3{background:url(../images/zj/btn_3.jpg) no-repeat; width:330px; height:180px; cursor:pointer; border:none;}
+.btn_search3:hover{background:url(../images/zj/btn_3.jpg) left bottom no-repeat;}
+.btn_search4{background:url(../images/zj/btn_4.jpg) no-repeat; width:330px; height:180px; cursor:pointer; border:none;}
+.btn_search4:hover{background:url(../images/zj/btn_4.jpg) left bottom no-repeat;}
+
+.btn_search1_{background:url(../images/zj/btn_search1.jpg) no-repeat; width:270px; height:140px; cursor:pointer; border:none;}
+.btn_search1_:hover{background:url(../images/zj/btn_search1.jpg) left bottom no-repeat;}
+.btn_search2_{background:url(../images/zj/btn_search2.jpg) no-repeat; width:270px; height:140px; cursor:pointer; border:none;}
+.btn_search2_:hover{background:url(../images/zj/btn_search2.jpg) left bottom no-repeat;}
+.btn_search3_{background:url(../images/zj/btn_search3.jpg) no-repeat; width:270px; height:140px; cursor:pointer; border:none;}
+.btn_search3_:hover{background:url(../images/zj/btn_search3.jpg) left bottom no-repeat;}
+.btn_search4_{background:url(../images/zj/btn_search4.jpg) no-repeat; width:270px; height:140px; cursor:pointer; border:none;}
+.btn_search4_:hover{background:url(../images/zj/btn_search4.jpg) left bottom no-repeat;}
+.btn_bg{ background:url(../images/zj/btn_bg.jpg) repeat-x; height:135px;}
+
+	/* webtop */
+.web{ background: url(../images/zj/bg.jpg) repeat-x;}
+.webtop{height:90px; padding-bottom:6px;margin:auto;}
+.logo{ padding:20px 0 0 25px; }
+a.back{background: url(../images/zj/btn_back.gif) center no-repeat; padding-left:120px; float:right; font-size:22px;line-height:30px; cursor:hand;padding-right:10px;}
+.btn_s_index { width:87px; height:33px; background:url(../images/btn_s_index.jpg) no-repeat; border-style:none; border:0px ; text-align:left; text-indent:30px; cursor:pointer; }
+.listbox1{ border-bottom:solid 1px #b5cbe3;}
+.listbox2{padding:25px 50px;}
+.listbox3{ border-top:solid 1px #b5cbe3; text-align:right; line-height:35px;}
+.tle{ background: url(../images/zj/icon.jpg) left center no-repeat; padding-left:17px;color:#0e61ad; font-size:26px; font-family:"微锟斤拷锟脚猴拷", "锟斤拷锟斤拷", "锟斤拷锟斤拷"; line-height:30px;}
+.left{ float:left;}
+.right{ float:right;}
+.infobox{ padding:15px;}
+
+.tablebox1{font-size:20px;}
+.tablebox1 th{background:#e2f0fc; text-align:center; color:#0e61ad;line-height:55px; }
+.tablebox1 td{padding:0 3px;line-height:52px;}
+.tablebg{ background:#f2f1f1;}
+.red{ color:#cc0000;}
+
+.tablebox2{font-size:20px;}
+.tablebox2 th{background:#e2f0fc; text-align:right; padding-right:8px;color:#0e61ad;line-height:55px; }
+.tablebox2 td{padding:0 5px;line-height:52px; background:#f9f8f8;}
+
+a.btn1{background:url(../images/btn_bg2.gif) no-repeat; width:137px; height:59px; color:#fff; cursor:pointer; font-size:24px;text-decoration:none; line-height:59px; display:block; float:right; text-align:center; font-family:"微软雅黑", "黑体";"}
+a:hover.btn1{background:url(../images/btn_bg2.gif) 0 -59px no-repeat;}
+
+/* homePageAD.css */
+#advertising{float:left; width:1920px; height:630px; background:#FFF; margin:0px 0px 0px 0px; _margin:0px 0px 0px 0px; overflow:hidden;}
+.slider{margin:0px;padding:0px;position:absolute; z-index:10;}
+.slider li{list-style:none; display:inline;}
+.slider img{width:1918px; height:630px; display:block; border:1px solid #CCC;}
+.num{position:absolute; right:10px; bottom:75px;z-index:90;}
+.num li{float:left; color:#FF7300; text-align:center; line-height:20px; width:16px; font-family:Arial; font-size:12px; cursor:pointer; overflow:hidden; margin:3px 1px; border:1px solid #FF7300; background-color:#fff;}
+.num li.on{color:#fff; line-height:21px; width:21px; height:21px; font-size:16px; margin:0px 1px; border:0px; background-color:#FF7300; font-weight:bold;}
+
+
+.bottom{ background:url(../images/zj/bottom_bg.jpg) repeat-x; height:90px; text-align:center; padding-top:25px; font-family:Arial, Helvetica, sans-serif; border-top:solid 1px #fff;}

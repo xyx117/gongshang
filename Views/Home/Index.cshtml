@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>县市场主体信用信息公示平台</title>
+<link href="/Content/other/index.css" rel="stylesheet" type="text/css" />
+
+<script src="scripts/jquery-1.7.1.js"></script>
+
+<script type="text/javascript">
+$(function(){									
+				var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+				var h = window.innerHeight || document.documentElement.clientHeight || document.body.clienHeight;
+				
+				$(".indextop, .indexlistbox").width(w);
+    $(".indextop").height(400*w/1920);
+				$(".indextop").css("background-size",w);
+				$(".indexlogo img").width(1089 * w / 1920);
+				$(".indexlistbox img").width(250 * w / 1920);				
+			});
+   </script> 
+</head>
+<body>
+
+<div class="indextop">      
+        <div class="indexlogo"><img src="~/content/images/index_logo.png" /></div>            
+</div>
+
+<div class="indexlistbox">
+   <div style="padding-top:0px;">
+        <table border="0" id="tb1">
+            <tr>
+                <td><a href ="http://aic.hainan.gov.cn:1888/aiccips" target="_blank" ><img src="/content/images/1.png" /> </a></td>
+                <td rowspan="2">&nbsp;</td>
+                 <td><a href ="/yichangchaxun/"><img src="/content/images/2.png" /></a> </td>
+                 <td rowspan="2">&nbsp;</td>
+                  <td><a href="/heimingdanchaxun/"><img src="/content/images/3.png" /></a></td>
+              <td rowspan="2">&nbsp;</td>
+                <td><a href="/chufachaxun/"><img src="/content/images/4.png" /></a></td>
+     <td rowspan="2">&nbsp;</td>
+                <td><a href="http://sbcx.saic.gov.cn:9080/tmois/wszhcx_getZhcx.xhtml" target="_blank"><img src="/content/images/5.png" /></a></td>
+            </tr>            
+         </table>
+    </div>
+    
+    <div class="indexbottom"> 县工商行政管理局   版权所有    </div>
+
+</div>  
+    
+</body>
+</html>

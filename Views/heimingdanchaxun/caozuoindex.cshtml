@@ -1,0 +1,113 @@
+﻿@model PagedList.IPagedList<gongshangchaxun.Models.heimingdan>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "定安县严重违法企业名单公示与查询";
+    Layout = "~/Views/Shared/_Layoutgl.cshtml";
+}
+
+  <div>
+    <div class="listbox2"></div>
+     <div class="listbox1">
+         <div class="tle left">严重违法企业名单信息：</div>
+         <div class="right">
+            <a href="/heimingdanchaxun/excelImport/"><img src="/content/images/daoru.png" style="float:right; margin-top:1px; margin-bottom:2px; margin-right:100px; cursor: pointer;border-width:0px 0px 0px 0px;height:30px;"/></a>
+             <a href="/gl/"><img src="/content/images/fanhui.png" style="float:right; margin-top:1px; margin-bottom:2px; margin-right:50px; cursor: pointer;border-width:0px 0px 0px 0px;height:30px;"/></a>
+
+         </div>
+         <div class="clr"></div>
+     </div>
+    </div>
+
+@{  string init_search="";
+    if (ViewBag.CurrentFilter == null)
+    { init_search = " "; }      
+    else
+   {
+      init_search=ViewBag.CurrentFilter;
+    }
+ }
+
+@using (Html.BeginForm( ))
+{
+    <table id="mytable2" >
+        <tr>
+          <td style="width:60%; text-align:right; ">
+              <input type="text" id="name" name="SearchString" style="width:500px;height:33px;line-height:30px;" value="@init_search" onfocus="if(this.value==defaultValue){this.value='';}" onblur="if(!value){this.value=defaultValue;}" />
+          </td>
+          <td style="width:40%;margin-left:1px;" >
+              <input type="submit" value=""  class="btn_s_index" />
+          </td>
+        </tr>
+      </table>    
+}
+
+
+<table class="tablebox1">
+    <tr>
+        @*<th width="5%">序号</th>*@
+           <th style="width:5%;" >序号</th>
+           <th style="width:11%;" >注册号</th>
+           <th style="width:17%;">企业名称</th>
+           
+           <th style="width:7%;">法定代表人</th>
+           <th style="width:7%;">列入日期</th>
+           <th style="width:14%;">列入原因</th>
+           <th style="width:9%;">作出决定机关</th>
+           <th style="width:7%;">移出日期</th>
+           <th style="width:14%;">移出事由</th>
+           <th style="width:9%;">作出决定机关</th>
+    </tr>
+    <tbody id="abnormalListBody">
+            @{int xuhao = 0; }
+            
+            @foreach (var item in Model) {
+              <tr>
+                  <td>
+                     @{ xuhao=xuhao+1;
+                        @xuhao; }
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.zhuceID)
+                 </td>
+                 <td>
+                      @Html.DisplayFor(modelItem => item.mingcheng)
+                 </td>
+                 <td>
+                      @Html.DisplayFor(modelItem => item.fadingdaibiaoren)
+                 </td>
+                 <td>
+                      @Html.DisplayFor(modelItem => item.lieruriqi )
+                 </td>
+
+                 <td style="text-align:left;line-height:30px;">
+                      @Html.DisplayFor(modelItem => item.lieruyuanyin )
+                 </td>
+                 
+                  <td>
+                      @Html.DisplayFor(modelItem => item.zuochujuedingjiguan1 )
+                  </td>
+
+                  <td>
+                      @Html.DisplayFor(modelItem => item.yichuriqi )
+                  </td>
+
+                  <td style="text-align:left;line-height:30px;">
+                      @Html.DisplayFor(modelItem => item.yichushiyou )
+                  </td>
+                  
+                  <td>
+                      @Html.DisplayFor(modelItem => item.zuochujuedingjiguan )
+                  </td>
+       
+                 </tr>
+             }
+    </tbody>
+
+</table>
+<br />
+<div style="text-align:right; margin-right:100px">
+@(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount 页
+
+@Html.PagedListPager( Model, page => Url.Action("Index", new { page, currentFilter=ViewBag.CurrentFilter }) )
+</div>

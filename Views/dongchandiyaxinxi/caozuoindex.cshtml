@@ -1,0 +1,115 @@
+﻿@model PagedList.IPagedList<gongshangchaxun.Models.dongchandiyaxinxi>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "动产抵押信息";
+    Layout = "~/Views/Shared/_Layoutgl.cshtml";
+} 
+    <div class="listbox2"></div>
+     <div class="listbox1">
+         <div class="tle left">动产抵押登记信息：</div>
+         <div class="right">
+             <a href="/dongchandiyaxinxi/excelImport/"><img src="/content/images/daoru.png" style="float:right; margin-top:1px; margin-bottom:2px; margin-right:100px; cursor: pointer;border-width:0px 0px 0px 0px;height:30px;"/></a>
+             <a href="/gl/"><img src="/content/images/fanhui.png" style="float:right; margin-top:1px; margin-bottom:2px; margin-right:50px; cursor: pointer;border-width:0px 0px 0px 0px;height:30px;"/></a>
+         </div>
+         <div class="clr"></div>
+     </div>
+
+
+@{  string init_search="";
+    if (ViewBag.CurrentFilter == null)
+
+    { init_search = " "; }
+    
+   
+    else
+   {
+      init_search=ViewBag.CurrentFilter;
+    }
+ }
+
+
+@using (Html.BeginForm( ))
+{
+    <table id="mytable2" >
+        <tr>
+          <td style="width:60%; text-align:right; ">
+              <input type="text" id="name" name="SearchString" style="width:500px;height:33px;line-height:30px;" value="@init_search" onfocus="if(this.value==defaultValue){this.value='';}" onblur="if(!value){this.value=defaultValue;}" />
+          </td>
+          <td style="width:40%;margin-left:1px;" >
+              <input type="submit" value=""  class="btn_s_index" />
+          </td>
+        </tr>
+      </table>    
+}
+
+<table class="tablebox1">
+     <tr>
+        <th style="width:5%;">
+            序号
+        </th>
+        <th style="line-height:30px;width:15%">
+           抵押人名称(姓名)
+        </th>
+        <th style="width:12%;">
+            登记编号
+        </th>
+        <th style="width:7%;">
+            登记日期
+        </th>
+        <th style="width:15%;">
+            登记机关
+        </th>
+        <th style="width:13%;">
+            被担保债权数额
+        </th>
+        <th style="width:23%;">
+            担保的范围
+        </th>
+        <th style="width:10%;">
+            担保期限
+        </th>
+    </tr>
+
+    <tbody id="abnormalListBody">
+            @{int xuhao = 0; }
+@foreach (var item in Model) {
+    <tr>
+
+        <td>
+             @{ xuhao=xuhao+1;
+                        @xuhao; }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diyaren)
+        </td>
+        <td style="text-align:left;line-height:30px;">
+            @Html.DisplayFor(modelItem => item.dengjiID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dengjiriqi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dengjijiguan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.beidanbaozhaiquanshue)
+        </td>
+        <td style="text-align:left;line-height:30px;">
+            @Html.DisplayFor(modelItem => item.danbaofanwei)
+        </td>
+        <td style="text-align:left;line-height:30px;">
+            @Html.DisplayFor(modelItem => item.danbaoqixian)
+        </td>
+
+    </tr>
+}
+         </tbody>
+</table>
+<br />
+<div style="text-align:right; margin-right:100px">
+@(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount 页
+
+@Html.PagedListPager( Model, page => Url.Action("Index", new { page, currentFilter=ViewBag.CurrentFilter }) )
+    
+</div>   

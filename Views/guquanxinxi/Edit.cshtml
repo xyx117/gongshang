@@ -1,0 +1,85 @@
+﻿@model gongshangchaxun.Models.guquanxinxi
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>guquanxinxi</legend>
+
+        @Html.HiddenFor(model => model.guquanxinxiID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mingcheng)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mingcheng)
+            @Html.ValidationMessageFor(model => model.mingcheng)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.chuziren)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.chuziren)
+            @Html.ValidationMessageFor(model => model.chuziren)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.zhiquanren)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.zhiquanren)
+            @Html.ValidationMessageFor(model => model.zhiquanren)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.jine)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.jine)
+            @Html.ValidationMessageFor(model => model.jine)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.beidanbaojine)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.beidanbaojine)
+            @Html.ValidationMessageFor(model => model.beidanbaojine)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dengjiriqi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dengjiriqi)
+            @Html.ValidationMessageFor(model => model.dengjiriqi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.zhuangtai)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.zhuangtai)
+            @Html.ValidationMessageFor(model => model.zhuangtai)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

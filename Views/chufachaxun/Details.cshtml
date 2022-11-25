@@ -1,0 +1,50 @@
+﻿@model gongshangchaxun.Models.chufamingdan
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>chufamingdan</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mingcheng)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mingcheng)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fadingdaibiaoren)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fadingdaibiaoren)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.jizaishiyou)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.jizaishiyou)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.jizairiqi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.jizairiqi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.jizaibumen)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.jizaibumen)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.zhuceID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

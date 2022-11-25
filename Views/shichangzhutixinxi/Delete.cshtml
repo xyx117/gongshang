@@ -1,0 +1,60 @@
+﻿@model gongshangchaxun.Models.shichangzhutixinxi
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>shichangzhutixinxi</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mingcheng)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mingcheng)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.zhuceID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zhuceID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fadingdaibiaoren)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fadingdaibiaoren)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.beianxinxi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.beianxinxi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.chengliriqi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.chengliriqi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dengjibumen)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dengjibumen)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,66 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body{font-family:SimSun,"Microsoft YaHei";margin:0; padding:0; border:0; font-size:14px; line-height:18px; color:#666;}
+a{text-decoration:none; color:#0e61ad}
+a:hover{color:#f60;}
+.clr{clear:both;}
+
+
+.indextop{ width:1920px; padding:0; background:url(/content/images/pic01.jpg) no-repeat;}
+
+.indexlogo{ width:1089px;margin:auto; padding-top:50px;}
+
+.indexlistbox{
+    /* background:url(/content/images/index_bg.jpg) repeat-x;*/
+    background-color:#3399FF;
+    width:1920px; 
+    height:550px;
+    position:absolute;
+    z-index:-100;
+    padding-top:50px;
+    margin:0 auto;
+    
+  
+  }
+#tb1 img
+{
+    border: 0;
+}
+#tb1 a:hover img {   
+    /*filter:white;  */
+    opacity:0.8; 
+ } 
+
+.indexbottom{
+    padding-top:70px;
+      text-align:center; 
+      font-size:18px; 
+      font-family:"Microsoft YaHei";
+      color:#FFF;
+}
+
+.btn_search1{background:url(/content/images/btn_1.jpg) no-repeat; width:330px; height:180px; cursor:pointer; border:none;}
+.btn_search1:hover{background:url(/content/images/btn_1.jpg) left bottom no-repeat;}
+.btn_search2{background:url(/content/images/btn_2.jpg) no-repeat; width:330px; height:180px; cursor:pointer; border:none;}
+.btn_search2:hover{background:url(/content/images/btn_2.jpg) left bottom no-repeat;}
+.btn_search3{background:url(/content/images/btn_3.jpg) no-repeat; width:330px; height:180px; cursor:pointer; border:none;}
+.btn_search3:hover{background:url(/content/images/btn_3.jpg) left bottom no-repeat;}
+.btn_search4{background:url(/content/images/btn_4.jpg) no-repeat; width:330px; height:180px; cursor:pointer; border:none;}
+.btn_search4:hover{background:url(/content/images/btn_4.jpg) left bottom no-repeat;}
+.btn_bg{ background:url(/content/images/btn_bg.jpg) repeat-x; height:135px;}
+
+.btn_search1_{background:url(/content/images/btn_search1.jpg) no-repeat; width:270px; height:140px; cursor:pointer; border:none;}
+.btn_search1_:hover{background:url(/content/images/btn_search1.jpg) left bottom no-repeat;}
+.btn_search2_{background:url(/content/images/btn_search2.jpg) no-repeat; width:270px; height:140px; cursor:pointer; border:none;}
+.btn_search2_:hover{background:url(/content/images/btn_search2.jpg) left bottom no-repeat;}
+.btn_search3_{background:url(/content/images/btn_search3.jpg) no-repeat; width:270px; height:140px; cursor:pointer; border:none;}
+.btn_search3_:hover{background:url(/content/images/btn_search3.jpg) left bottom no-repeat;}
+.btn_search4_{background:url(/content/images/btn_search4.jpg) no-repeat; width:270px; height:140px; cursor:pointer; border:none;}
+.btn_search4_:hover{background:url(/content/images/btn_search4.jpg) left bottom no-repeat;}
+.btn_bg{ background:url(/content/images/btn_bg.jpg) repeat-x; height:135px;}
+
+    #tb1
+    {
+        margin:0 auto;
+    }

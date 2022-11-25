@@ -1,0 +1,64 @@
+﻿@model gongshangchaxun.Models.guquanxinxi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>guquanxinxi</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mingcheng)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mingcheng)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.chuziren)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.chuziren)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.zhiquanren)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zhiquanren)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.jine)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.jine)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.beidanbaojine)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.beidanbaojine)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dengjiriqi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dengjiriqi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.zhuangtai)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zhuangtai)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.guquanxinxiID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

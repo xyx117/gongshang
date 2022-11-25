@@ -1,0 +1,19 @@
+﻿@model gongshangchaxun.Models.setupdb
+@{
+    ViewBag.Title = "Details";
+}
+<h2>Details</h2>
+<fieldset>
+    <legend>setupdb</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.zhi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zhi)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.canshu }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
